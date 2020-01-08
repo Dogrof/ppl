@@ -266,7 +266,7 @@
               <input type="email" name="mail" class="sectionForm__form_input sectionForm__form_inputLast" placeholder="Email" />
             </label>
             <button type="submit" class="sectionForm__form_button btnSignUp">Sign UP</button>
-            <a href="https://plusppl.com/wp-login.php?loginSocial=facebook" rel="nofollow" aria-label="Login via <b>Facebook</b>" data-plugin="nsl" data-action="connect" data-provider="facebook" class="sectionForm__form_buttonInsta btnInsta "> Sign UP via Facebook </a>
+            <a href="http://ppl.loc/wp-login.php?loginSocial=facebook" rel="nofollow" aria-label="Login via <b>Facebook</b>" data-plugin="nsl" data-action="connect" data-provider="facebook" class="sectionForm__form_buttonInsta btnInsta "> Sign UP via Facebook </a>
           </form>
         </div>
       </section>
