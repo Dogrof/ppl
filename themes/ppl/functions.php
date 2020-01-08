@@ -280,7 +280,8 @@ function st_handle_registration(){
 			}else{
 
 				$user_meta = compact('fname', 'lname', 'shops', 'mails', 'inst');
-				
+				update_user_meta($user_id, 'first_name', $fname);
+				update_user_meta($user_id, 'last_name', $lname);			 
 				foreach($user_meta as $key => $value) {
 					update_user_meta($user_id, $key, $value);
 				}

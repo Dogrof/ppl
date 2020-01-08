@@ -2328,13 +2328,16 @@ svg {
     .firstSection__scrollDown:before {
         display: none
     }
+	section.motivation{
+		max-height: 683px;
+	}
     .firstSection__scrollDownMobail {
         display: block;
         margin-bottom: 70px
     }
     .firstScreenBlock {
-        padding-top: 0;
-        padding-bottom: 50px
+		padding-top: 20px;
+		padding-bottom: 10px;
     }
     .firstScreenBlock__h {
         font-size: 50px;
@@ -2563,9 +2566,15 @@ svg {
     .joinInput,
     .sectionForm__form_input {
         margin-top: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         font-size: 14px
     }
+	.btnGoogle__join{
+	margin-top: 14px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    background-size: 28px 28px, 100%;
+    background-position: 14px 11px;
+	}
 }
 
 @media screen and (max-width:600px) {
@@ -2594,9 +2603,9 @@ svg {
         margin-bottom: 12px
     }
     .btnInsta {
-        width: 266px;
-        height: 60px;
-        font-size: 14px
+		width: 208px;
+		height: 47px;
+		font-size: 14px;
     }
     .joinInput {
         height: 47px
@@ -2766,7 +2775,7 @@ svg {
 		padding: 44px 0 0 0;
     }
     .modalContainerPPL__numberFollowers_p {
-		width: 233px;
+		width: auto;
 		height: 16px;
 		left: 28px;
 		top: 97px;
@@ -2777,9 +2786,10 @@ svg {
 		line-height: 16px;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		letter-spacing: 0.02em;
 		color: #4F4F4F;
-		padding-left: 28px;
+		padding-left: 0;
 		margin-bottom: 8px;
     }
     .modalContainerPPL__numberFollowers_textForm {
@@ -2796,13 +2806,15 @@ svg {
 		margin-bottom: 10px;
     }
     .modalContainerPPL__numberFollowers_ul {
+		width: 96%;
+    	margin: 0 auto;
         margin-bottom: 10px
     }
     .modalContainerPPL__numberFollowers_li {
-        margin: 0 0 10px 10px;
-        width: auto;
-        height: 37px;
-        padding: 5px
+		margin: 0 0 15px 0px;
+		width: 120px;
+		height: 37px;
+		padding: 5px;
     }
     .modalContainerPPL__lastPopap {
         width: 288px;
@@ -2919,21 +2931,22 @@ svg {
 		margin-bottom: 22px
     }
     .checkbox+label {
-        width: 100%
+        width: 100%;
+		font-size: 12px;
     }
     .checkboxFollowers+label {
-		font-family: Lato;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 14px;
-		line-height: 16px;
-		display: flex;
-		align-items: center;
-		letter-spacing: 0.02em;
-		color: #333333;
-		height: 43px;
-		padding: 5px;
-		margin: 0 -30px 5px 18px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #333333;
+    height: 43px;
+    padding: 5px;
+    margin: 0 0px 4px 18px;
     }
 }
 
@@ -3041,7 +3054,7 @@ svg {
         margin-bottom: 50px
     }
     .sectionFormTwo {
-        padding-top: 40px;
+        
         padding-bottom: 55px
     }
     .sectionFormTwo__h {
@@ -3127,8 +3140,11 @@ svg {
         justify-content: center
     }
     .modalContainer__join {
-        padding-top: 58px
+        padding-top: 0
     }
+	.sliderSectionPPL__btn_prev, .sliderSectionPPL__btn_next{
+		top: 6px;
+	}
     .modalContainer__join_closer {
         width: 17px;
         height: 18px;

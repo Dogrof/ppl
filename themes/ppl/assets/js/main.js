@@ -228,6 +228,37 @@ $('.sectionForm__form button').click(function(e){
 	  }
       $('.modalContainer').addClass('active');
 });
+
+$('.first-form').on('submit', function(e){
+	e.preventDefault();
+
+	var mail = $('.first-form .formEmail2').val();
+	var first_name = $('.first-form .formName2').val();
+	var second_name = $('.first-form .formLastName2').val();
+	$('.joinFormMobail .formName').val(first_name);
+	$('.joinFormMobail .formLastName').val(second_name);
+	$('.joinFormMobail .formEmail').val(mail);
+
+	
+  $('.modalContainerPPL__containerBoxPPL, .modalContainerPPL').addClass('active');
+  $('.modalContainer').removeClass('active');	
+});
+	
+$('.sectionFormTwo__flex .sectionForm__form-v').on('submit', function(e){
+	e.preventDefault();
+
+	var mail2 = $('.sectionFormTwo .second-mail').val();
+	var first_name2 = $('.sectionFormTwo .fName').val();
+	var second_name2 = $('.sectionFormTwo .lName').val();
+	$('.joinFormMobail .formName').val(first_name2);
+	$('.joinFormMobail .formLastName').val(second_name2);
+	$('.joinFormMobail .formEmail').val(mail2);
+
+	
+  $('.modalContainerPPL__containerBoxPPL, .modalContainerPPL').addClass('active');
+  $('.modalContainer').removeClass('active');	
+});	
+	
 //first popup submit
 $('.modalContainer__join .joinFormMobail').on('submit', function(e){
   e.preventDefault();
@@ -253,9 +284,11 @@ $('.modalContainerPPL__containerBoxPPL .modalContainerPPL__form.secondPopup .che
   var button = $('.modalContainerPPL__form.secondPopup .modalContainerPPL__form_buttonSelect');
   if($('.modalContainerPPL__containerBoxPPL .modalContainerPPL__form.secondPopup .checkbox:checked').length){
     button.prop('disabled', false);
+	$('.secondPopup .modalContainerPPL__form_buttonSelect').text("Ok, I'm done");
   }
   else{
     button.prop('disabled', 'disabled');
+	$('.secondPopup .modalContainerPPL__form_buttonSelect').text("Select at least one store");
   }
 });
 
@@ -266,7 +299,7 @@ $('.modalContainerPPL__form_BoxButton .modalContainerPPL__form_buttonMoreShops')
 	var text = $(this).text();
     $(this).text( text == "Less shops" ? "More shops" : "Less shops");
 });
-
+	
 //third popup submit
 $('.modalContainerPPL__numberFollowers .modalContainerPPL__form').on('submit', function(e){
   e.preventDefault();
@@ -283,14 +316,17 @@ $('.modalContainerPPL__numberFollowers .modalContainerPPL__form').on('submit', f
 $('.modalContainerPPL__form input.modalContainerPPL__numberFollowers_button, .modalContainerPPL__form_button[name="mails"]').on('change', function(){
   var followers = $('.modalContainerPPL__numberFollowers_button[name="followers"]:checked').length;
   var mails = $('.modalContainerPPL__form_button[name="mails"]:checked').length;
-  console.log(followers, mails);
+  //console.log(followers, mails);
 
   var button = $('.modalContainerPPL__form.thirdPopup .modalContainerPPL__form_buttonCenter');
-  if(followers && mails){
+  if(followers){
     button.prop('disabled', false);
+	  $('.thirdPopup .modalContainerPPL__form_buttonCenter').text("Ok, I'm done");
+	 
   }
   else{
     button.prop('disabled', 'disabled');
+	 $('.thirdPopup .modalContainerPPL__form_buttonCenter').text("2 clicks and you're done");  
   }
 });
 //last popup

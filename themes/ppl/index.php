@@ -197,24 +197,27 @@
       <section class="sectionForm wrapper">
         <div class="sectionForm__flex wow slideInLeft">
           <h2 class="sectionForm__h"> Join Now </h2>
-          <form action="#" method="POST" class="sectionForm__form-v js-form">
+<!-- 			js-form -->
+          <form action="#" method="POST" class="sectionForm__form-v first-form "> 
             <p>
               <label> &nbsp;&nbsp;First name <br />
-                <input type="text" name="name" class="sectionForm__form_input formName2" placeholder="First name" />
+                <input type="text" name="name" class="sectionForm__form_input formName2" placeholder="First name" maxlength="32" pattern="[A-Za-z ]{1,32}" required/>
               </label>
             </p>
             <p>
               <label> &nbsp;&nbsp;Last name <br />
-                <input type="text" name="last_name" class="sectionForm__form_input formLastName2" placeholder="Last name" />
+                <input type="text" name="last_name" class="sectionForm__form_input formLastName2" placeholder="Last name" maxlength="32" pattern="[A-Za-z ]{1,32}" required/>
               </label>
             </p>
             <p>
               <label> &nbsp;&nbsp;Email <br />
-                <input type="email" name="mail" class="sectionForm__form_input formEmail2" placeholder="Email" />
+                <input type="email" name="mail" class="sectionForm__form_input formEmail2" placeholder="Email" required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
               </label>
             </p>
-            <button type="submit" class="sectionForm__form_button btnSignUp ">Sign UP</button>
+            <button type="submit" class=" btnSignUp btnSignUp__join">Sign UP</button>
             <a href="https://plusppl.com/wp-login.php?loginSocial=facebook" rel="nofollow" aria-label="Login via <b>Facebook</b>" data-plugin="nsl" data-action="connect" data-provider="facebook" class="sectionForm__form_buttonInsta btnInsta "> Sign UP via Facebook </a>
+			<a href="<?= home_url('/wp-login.php?loginSocial=google/'); ?>" class="sectionForm__form_buttonInsta btnInsta btnGoogle__join"> Sign UP via Google </a>   
           </form>
         </div>
       </section>
@@ -255,18 +258,20 @@
         <div class="sectionForm__flex sectionFormTwo__flex wow slideInRight">
           <h2 class="sectionForm__h sectionFormTwo__h"><?php the_field('change-title'); ?></h2>
           <p class="sectionFormTwo__p"><?php the_field('change-text'); ?></p>
-          <form action="#" method="POST" class="sectionForm__form-v js-form">
+          <form action="#" method="POST" class="sectionForm__form-v ">
             <label> &nbsp;&nbsp;&nbsp;First name <br />
-              <input type="text" name="name" class="sectionForm__form_input" placeholder="First name" />
+              <input type="text" name="name" class="sectionForm__form_input fName" placeholder="First name" maxlength="32" pattern="[A-Za-z ]{1,32}" required/>
             </label>
             <label> &nbsp;&nbsp;&nbsp;Last name <br />
-              <input type="text" name="last_name" class="sectionForm__form_input" placeholder="Last name" />
+              <input type="text" name="last_name" class="sectionForm__form_input lName" placeholder="Last name" maxlength="32" pattern="[A-Za-z ]{1,32}" required/>
             </label>
             <label> &nbsp;&nbsp;&nbsp;Email <br />
-              <input type="email" name="mail" class="sectionForm__form_input sectionForm__form_inputLast" placeholder="Email" />
+              <input type="email" name="mail" class="sectionForm__form_input sectionForm__form_inputLast second-mail" placeholder="Email" required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
             </label>
-            <button type="submit" class="sectionForm__form_button btnSignUp">Sign UP</button>
+            <button type="submit" class=" btnSignUp btnSignUp__join">Sign UP</button>
             <a href="https://plusppl.com/wp-login.php?loginSocial=facebook" rel="nofollow" aria-label="Login via <b>Facebook</b>" data-plugin="nsl" data-action="connect" data-provider="facebook" class="sectionForm__form_buttonInsta btnInsta "> Sign UP via Facebook </a>
+			<a href="<?= home_url('/wp-login.php?loginSocial=google/'); ?>" class="sectionForm__form_buttonInsta btnInsta btnGoogle__join"> Sign UP via Google </a>  		  
           </form>
         </div>
       </section>
