@@ -196,6 +196,7 @@
         <div class="sectionForm__flex wow slideInLeft">
           <h2 class="sectionForm__h"> Join Now </h2>
 <!-- 			js-form -->
+
           <form action="#" method="POST" class="sectionForm__form-v first-form ">
             <p>
               <label> &nbsp;&nbsp;First name <br />
@@ -339,21 +340,29 @@
           <section class="sectionForm wrapper">
             <div class="sectionForm__flex">
               <h2 class="sectionForm__h sectionForm__h_rose"> Join Now </h2>
+              <?php
+                  $user = wp_get_current_user();
+                  // $nameFromAcc = get_the_author_meta( 'name', $user->ID );
+                  // $lastNamefromAcc = get_the_author_meta( 'last_name', $user->ID );
+                  // $mailFromAcc = get_the_author_meta( 'user_email', $user->ID );
+                  // var_dump($user);
+
+               ?>
               <form action="#" method="POST" class="joinFormMobail sectionForm__form-v">
                 <p class="register-errors"></p>
                 <p>
                   <label> &nbsp;&nbsp;First name <br />
-                    <input type="text" name="name" class="joinInput formName" value="" placeholder="First name" maxlength="32" pattern="[A-Za-z ]{1,32}" required/>
+                    <input type="text" name="name" class="joinInput formName" placeholder="First name" maxlength="32" pattern="[A-Za-z ]{1,32}" required value="<?php echo $user->user_firstname  ?>" />
                   </label>
                 </p>
                 <p>
                   <label> &nbsp;&nbsp;Last name <br />
-                    <input type="text" name="last_name" class="joinInput formLastName" value="" placeholder="Last name" maxlength="32" pattern="[A-Za-z ]{1,32}" required/>
+                    <input type="text" name="last_name" class="joinInput formLastName" placeholder="Last name" maxlength="32" pattern="[A-Za-z ]{1,32}" required value="<?php echo $user->user_lastname ?>" />
                   </label>
                 </p>
                 <p>
                   <label> &nbsp;&nbsp;Email <br />
-                    <input type="email" name="mail" class="joinInput formEmail" value="" placeholder="Email" required
+                    <input type="email" name="mail" class="joinInput formEmail" placeholder="Email" required value="<?php echo $user->user_email ?>"
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
                   </label>
                 </p>
