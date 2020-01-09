@@ -304,6 +304,14 @@ add_action( 'wp_ajax_register_action', 'st_handle_registration' );
 add_action( 'wp_ajax_nopriv_register_action', 'st_handle_registration' );
 
 
+// if( is_user_logged_in() ){
+// 	echo 'Авторизован!';
+// }
+// 
+//
+// if( wp_get_current_user() ){
+// 	wp_get_current_user();
+// }
 
 // $providerID = 'facebook';
 // if (NextendSocialLogin::isProviderEnabled($providerID)) {
