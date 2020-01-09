@@ -290,16 +290,16 @@
             <h3 class="footer__li_h">Navigation</h3>
           </li>
           <li class="footer__li">
-            <p class="footer__li_p">Why it is necessary</p>
+            <a href="#Scroll" class="footer__li_p">Why it is necessary</a>
           </li>
           <li class="footer__li">
-            <p class="footer__li_p">Solutions and technology</p>
+            <a href="#section_anchor2" class="footer__li_p">Solutions and technology</a>
           </li>
           <li class="footer__li">
-            <p class="footer__li_p">Plus community</p>
+            <a href="#section_anchor3" class="footer__li_p">Plus community</a>
           </li>
           <li class="footer__li">
-            <p class="footer__li_p">Our vision</p>
+            <a href="#section_anchor4" class="footer__li_p">Our vision</a>
           </li>
           <li class="footer__li">
             <p class="footer__li_p">Terms and Conditionals</p>

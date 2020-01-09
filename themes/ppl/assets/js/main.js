@@ -143,6 +143,13 @@ $( document ).ready(function() {
             $("html, body").animate({
                 scrollTop: n.offset().top
             }, 1e3)
+        }), $('.footer__li a').click(function(e){
+          e.preventDefault();
+          var t = $(e.target).attr("href"),
+              n = $(t);
+          $("html, body").animate({
+              scrollTop: n.offset().top
+          }, 1e3)
         });
         $(".navigation__copyBtn");
         var g = document.location.href;
@@ -239,11 +246,11 @@ $('.first-form').on('submit', function(e){
 	$('.joinFormMobail .formLastName').val(second_name);
 	$('.joinFormMobail .formEmail').val(mail);
 
-	
+
   $('.modalContainerPPL__containerBoxPPL, .modalContainerPPL').addClass('active');
-  $('.modalContainer').removeClass('active');	
+  $('.modalContainer').removeClass('active');
 });
-	
+
 $('.sectionFormTwo__flex .sectionForm__form-v').on('submit', function(e){
 	e.preventDefault();
 
@@ -254,11 +261,11 @@ $('.sectionFormTwo__flex .sectionForm__form-v').on('submit', function(e){
 	$('.joinFormMobail .formLastName').val(second_name2);
 	$('.joinFormMobail .formEmail').val(mail2);
 
-	
+
   $('.modalContainerPPL__containerBoxPPL, .modalContainerPPL').addClass('active');
-  $('.modalContainer').removeClass('active');	
-});	
-	
+  $('.modalContainer').removeClass('active');
+});
+
 //first popup submit
 $('.modalContainer__join .joinFormMobail').on('submit', function(e){
   e.preventDefault();
@@ -299,7 +306,7 @@ $('.modalContainerPPL__form_BoxButton .modalContainerPPL__form_buttonMoreShops')
 	var text = $(this).text();
     $(this).text( text == "Less shops" ? "More shops" : "Less shops");
 });
-	
+
 //third popup submit
 $('.modalContainerPPL__numberFollowers .modalContainerPPL__form').on('submit', function(e){
   e.preventDefault();
@@ -322,11 +329,11 @@ $('.modalContainerPPL__form input.modalContainerPPL__numberFollowers_button, .mo
   if(followers){
     button.prop('disabled', false);
 	  $('.thirdPopup .modalContainerPPL__form_buttonCenter').text("Ok, I'm done");
-	 
+
   }
   else{
     button.prop('disabled', 'disabled');
-	 $('.thirdPopup .modalContainerPPL__form_buttonCenter').text("2 clicks and you're done");  
+	 $('.thirdPopup .modalContainerPPL__form_buttonCenter').text("2 clicks and you're done");
   }
 });
 //last popup
@@ -372,7 +379,7 @@ $('.modalContainerPPL__form_li label').click(function(e){
       var bottomOfWindow = windowHeight - (windowHeight / 3);
 
       if (Pos < topOfWindow + bottomOfWindow && (!($("#counterNew").hasClass("done")))) {
-      
+
       console.log('done');
         $(this).addClass('done');
         var $this = $(this),
@@ -394,7 +401,7 @@ $('.modalContainerPPL__form_li label').click(function(e){
         }
       });
 
-    
+
 });
 
 $(window).scroll(function() {
@@ -406,7 +413,7 @@ else {
 }
 
 });
-	
+
 //ajax send register form
 $('.modalContainerPPL__form_buttonCenter').on('click',function(){
 

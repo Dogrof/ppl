@@ -407,7 +407,10 @@ svg {
     background-position: 15px center;
     padding-left: 30px;
 }
-
+.sectionForm__flex {
+	width: 100%;
+	max-width: 552px;
+}
 .joinInput {
     margin: 10px auto 28px;
     display: block;
@@ -445,12 +448,21 @@ svg {
 .sectionForm__h,
 .sectionForm .sectionForm__h {
     font-family: Rubik bold;
+		letter-spacing: 0.02em;
     text-align: center;
     color: #e50058;
     font-size: 36px;
     margin-bottom: 40px
 }
+.sectionFormTwo__h:after {
+    content: '';
+    display: inline-block;
+    background-image: url(../img/svg/LetsChange.svg);
+    width: 22px;
+    height: 20px;
+		margin-left: 6px;
 
+}
 .sectionForm__form {
     width: 555px;
     margin: 0 auto
@@ -2522,8 +2534,8 @@ svg {
 
 @media screen and (max-width:780px) {
     .wrapper {
-        padding-left: 15px;
-        padding-right: 15px
+        padding-left: 30px;
+        padding-right: 30px
     }
 }
 
@@ -2592,7 +2604,7 @@ svg {
         margin-bottom: 35px;
         color: #fff;
         text-decoration: none;
-        font-family: Rubik plus
+        font-family: Rubik plus;
     }
 }
 
@@ -2600,19 +2612,19 @@ svg {
     .btnSignUp,
 		.btnInsta  {
         width: 100%;
-        height: 47px;
+        height: 55px;
         font-size: 14px;
-        margin-bottom: 12px
+        margin-bottom: 12px;
     }
 
     .joinInput {
-        height: 47px
+        height: 47px;
     }
     .sectionForm__form {
         width: 100%;
     }
     .sectionForm__form_input {
-        height: 47px
+        height: 47px;
     }
 }
 
@@ -2634,13 +2646,18 @@ svg {
         padding-bottom: 48px
     }
     .sectionForm__h {
-        width: 300px;
+        /* width: 300px; */
         color: #000;
 		font-family:lato;
 		letter-spacing: 0.02em;
 		font-weight: 800;
 		margin-bottom: 24px
     }
+		.sectionForm__h.sectionFormTwo__h {
+			font-size: 24px;
+			color: #000;
+			letter-spacing: 0.02em;
+		}
     .sectionForm__form_inputLast {
         margin-bottom: 25px
     }
@@ -2957,6 +2974,9 @@ svg {
 }
 
 @media screen and (max-width:500px) {
+	.sectionForm__flex {
+		width: 100%;
+	}
     .navigation {
 		 /*opacity: 0 ;*/
 		 pointer-events: none ;
@@ -3191,7 +3211,7 @@ svg {
 @media screen and (max-width:400px) {
 	.sectionForm label {
         font-size: 12px;
-		padding-left: 20px
+		padding-left: 10px
     }
     .joinFormMobail label {
         font-size: 12px;
@@ -3252,17 +3272,17 @@ svg {
 	}
 }
 
-@media screen and (max-width:345px) {
+/* @media screen and (max-width:345px) {
     .motivation__motivationBox {
         width: 320px
     }
-}
+} */
 
-@media screen and (max-width:330px) {
+/* @media screen and (max-width:330px) {
     .motivation__li {
         width: 300px
     }
-}
+} */
 
 @media screen and (max-width:320px) {
     .sectionForm__form_input {
