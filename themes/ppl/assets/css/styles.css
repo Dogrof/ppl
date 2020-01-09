@@ -3,7 +3,7 @@ section:not(.firstSection) {
 	overflow-x: hidden;
 }
 section.motivation{
-    max-height: 600px;
+    /*max-height: 600px;*/
     overflow: hidden;
 }
 p, h1, h2, h3, h4, div, a, span {
@@ -399,12 +399,12 @@ svg {
 }
 
 .btnGoogle__join{
-    margin-top: 36px;
+    margin-top: 25px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     color: #333333;
     background: url('/wp-content/themes/ppl/assets/img/google-icon.png') no-repeat, #fff;
     background-size: 28px 28px, 100%;
-    background-position: 35px 22px;
+    background-position: 15px center;
     padding-left: 30px;
 }
 
@@ -442,7 +442,8 @@ svg {
     padding-left: 30px
 }
 
-.sectionForm__h {
+.sectionForm__h,
+.sectionForm .sectionForm__h {
     font-family: Rubik bold;
     text-align: center;
     color: #e50058;
@@ -2438,7 +2439,7 @@ svg {
         background-size: contain
     }
     .motivation:before {
-        display: none
+        /*display: none*/
     }
     .motivation__h {
         width: 300px
@@ -2510,7 +2511,7 @@ svg {
 		text-align: center;
 		text-transform: uppercase;
     }
-    
+
     .checkbox+label,
     .checkboxFollowers+label {
         width: 110px;
@@ -2619,12 +2620,13 @@ svg {
 }
 
 @media screen and (max-width:550px) {
-    .btnInsta__join,
-    .btnSignUp__join {
+/*    .btnInsta__join,
+    .btnSignUp__join,
+    .btnInsta {
         width: 212px;
         height: 47px;
         font-size: 12px
-    }
+    }*/
     .joinInput {
 		width: 211px;
 		height: 36px;
@@ -2707,7 +2709,8 @@ svg {
     .whySignUp:after {
         height: 361px;
         width: 145px;
-        top: 450px;
+        top: auto;
+        bottom: 50px;
         right: 0
     }
     .whySignUp__h {
@@ -2958,7 +2961,7 @@ svg {
 
 @media screen and (max-width:500px) {
     .navigation {
-		 opacity: 0 ;
+		 /*opacity: 0 ;*/
 		 pointer-events: none ;
         -webkit-box-align: center;
         -webkit-align-items: center;
@@ -3054,7 +3057,7 @@ svg {
         margin-bottom: 50px
     }
     .sectionFormTwo {
-        
+
         padding-bottom: 55px
     }
     .sectionFormTwo__h {
@@ -3241,6 +3244,8 @@ svg {
     }
 }
 
+
+
 @media screen and (max-width:360px) {
     .navigation__menu_logotypeImgMobail {
         margin-left: 115px
@@ -3307,3 +3312,19 @@ svg {
 }
 
 
+@media screen and (max-width: 350px) {
+  .modalContainer__join {
+    max-height: 95vh;
+    padding-top: 45px;
+  }
+  .modalContainer .btnInsta__join,
+  .modalContainer .btnSignUp__join,
+  .modalContainer .btnInsta {
+    height: 45px;
+    margin: 2px auto 13px;
+    width: 212px;
+  }
+  .modalContainer .btnGoogle__join {
+    background-position: 13px center;
+  }
+}

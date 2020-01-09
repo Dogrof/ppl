@@ -27,7 +27,7 @@
 
 		gtag(‘config’, ‘UA-153426364-1’);
 	</script>
-	
+
 	<!-- Google Tag Manager -->
     <script>
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -37,7 +37,7 @@
         })(window,document,'script','dataLayer','GTM-MCRZDQG');
     </script>
     <!-- End Google Tag Manager -->
-	
+
 	<!-- Hotjar Tracking Code for Plusppl.com -->
     <script>
         (function(h,o,t,j,a,r){
@@ -60,11 +60,11 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window,document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-         fbq('init', '2706173259462330'); 
+         fbq('init', '2706173259462330');
         fbq('track', 'PageView');
     </script>
     <noscript>
-        <img height="1" width="1" 
+        <img height="1" width="1"
         src="https://www.facebook.com/tr?id=2706173259462330&ev=PageView
         &noscript=1"/>
     </noscript>
@@ -198,7 +198,7 @@
         <div class="sectionForm__flex wow slideInLeft">
           <h2 class="sectionForm__h"> Join Now </h2>
 <!-- 			js-form -->
-          <form action="#" method="POST" class="sectionForm__form-v first-form "> 
+          <form action="#" method="POST" class="sectionForm__form-v first-form ">
             <p>
               <label> &nbsp;&nbsp;First name <br />
                 <input type="text" name="name" class="sectionForm__form_input formName2" placeholder="First name" maxlength="32" pattern="[A-Za-z ]{1,32}" required/>
@@ -217,7 +217,7 @@
             </p>
             <button type="submit" class=" btnSignUp btnSignUp__join">Sign UP</button>
             <a href="https://plusppl.com/wp-login.php?loginSocial=facebook" rel="nofollow" aria-label="Login via <b>Facebook</b>" data-plugin="nsl" data-action="connect" data-provider="facebook" class="sectionForm__form_buttonInsta btnInsta "> Sign UP via Facebook </a>
-			<a href="<?= home_url('/wp-login.php?loginSocial=google/'); ?>" class="sectionForm__form_buttonInsta btnInsta btnGoogle__join"> Sign UP via Google </a>   
+			<a href="<?= home_url('/wp-login.php?loginSocial=google/'); ?>" class="sectionForm__form_buttonInsta btnInsta btnGoogle__join"> Sign UP via Google </a>
           </form>
         </div>
       </section>
@@ -271,7 +271,7 @@
             </label>
             <button type="submit" class=" btnSignUp btnSignUp__join">Sign UP</button>
             <a href="https://plusppl.com/wp-login.php?loginSocial=facebook" rel="nofollow" aria-label="Login via <b>Facebook</b>" data-plugin="nsl" data-action="connect" data-provider="facebook" class="sectionForm__form_buttonInsta btnInsta "> Sign UP via Facebook </a>
-			<a href="<?= home_url('/wp-login.php?loginSocial=google/'); ?>" class="sectionForm__form_buttonInsta btnInsta btnGoogle__join"> Sign UP via Google </a>  		  
+			<a href="<?= home_url('/wp-login.php?loginSocial=google/'); ?>" class="sectionForm__form_buttonInsta btnInsta btnGoogle__join"> Sign UP via Google </a>
           </form>
         </div>
       </section>

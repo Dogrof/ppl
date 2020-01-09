@@ -120,7 +120,7 @@ $( document ).ready(function() {
             var t = $(e.target).attr("href"),
                 n = $(t);
             $("html, body").animate({
-                scrollTop: n.offset().top - 190
+                scrollTop: n.offset().top - 10
             }, 1e3)
         }), y.on("click", function(e) {
             e.preventDefault();
@@ -364,8 +364,17 @@ $('.modalContainerPPL__form_li label').click(function(e){
     $('#counterNew').attr('data-count', counterValue);
 
     $(window).scroll(function() {
-    if (checkVisible($('#counterNew'))) {
       $('#counterNew').each(function() {
+
+      var Pos = $(this).offset().top;
+      var topOfWindow = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      var bottomOfWindow = windowHeight - (windowHeight / 3);
+
+      if (Pos < topOfWindow + bottomOfWindow && (!($("#counterNew").hasClass("done")))) {
+      
+      console.log('done');
+        $(this).addClass('done');
         var $this = $(this),
           countTo = $this.attr('data-count').replace(/,/g, '');
         $({
@@ -382,8 +391,10 @@ $('.modalContainerPPL__form_li label').click(function(e){
             $this.text(numberWithCommas(this.countNum));
           }
         });
+        }
       });
-    }
+
+    
 });
 
 $(window).scroll(function() {
