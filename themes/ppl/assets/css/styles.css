@@ -497,7 +497,7 @@ svg {
 }
 
 .mobailNavigation {
-    display: none
+    display: none;
 }
 
 .navigationPC {
@@ -544,7 +544,9 @@ svg {
     margin-top: 5px;
     position: relative
 }
-
+.SectionToPpl .navigation {
+	opacity: 0;
+}
 .navigation.scrolled {
 	opacity: 1;
 	pointer-events: all;
@@ -1849,7 +1851,17 @@ svg {
     background: rgba(0, 0, 0, .35);
     z-index: 9999999
 }
-
+.modalContainer .sectionForm.wrapper {
+	padding: 0 15px;
+}
+.modalContainer .sectionForm__h,
+.modalContainer .sectionForm .sectionForm__h {
+	font-weight: 800;
+	font-size: 36px;
+	margin-bottom: 25px;
+	color: #333;
+	font-family: lato;
+}
 .modalContainer__containerBox {
     height: 100%;
     display: -webkit-box;
@@ -2417,9 +2429,10 @@ svg {
     }
     .whySignUp {
         background-image: url(../img/BackgroundGrayMobile.jpg);
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        background-size: contain
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+		    background-position: bottom;
     }
     .whySignUp:before {
         background-image: url(../img/svg/GrayScreenLeftMobail.png);
@@ -2637,7 +2650,7 @@ svg {
         font-size: 12px
     }*/
     .joinInput {
-		width: 211px;
+		/* width: 211px; */
 		height: 36px;
 		padding-left: 14.65px;
 		margin-top: 4px;
@@ -2684,7 +2697,7 @@ svg {
         margin: 0 auto
     }
     .SectionToPpl__p {
-        width: 292px;
+        /* width: 292px; */
         font-size: 14px
     }
     .SectionToPpl__endText {
@@ -3215,7 +3228,7 @@ svg {
     }
     .joinFormMobail label {
         font-size: 12px;
-		padding-left: 53px
+		padding-left: 10px
     }
 }
 @media screen and (max-height: 812px){
@@ -3332,6 +3345,7 @@ svg {
 @media screen and (max-width: 350px) {
   .modalContainer__join {
     max-height: 95vh;
+		padding-bottom: 20px;
     padding-top: 45px;
   }
   .modalContainer .btnInsta__join,
