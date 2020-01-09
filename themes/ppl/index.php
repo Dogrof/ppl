@@ -161,21 +161,19 @@
 			  </ul>
 
 			<?php	endif; ?>
+      <?php if( have_rows('hello_list') ): ?>
           <div class="sliderContainer">
             <div class="sliderSectionPPL__btn_prev"></div>
             <div class="sliderSectionPPL">
-              <div class="sliderSectionPPL__p">
-                <p class=" sliderSectionPPL__p"> Plus PPL have difficulty buying clothes online. And they are frustrated! </p>
-              </div>
-              <div class="sliderSectionPPL__p">
-                <p class=" sliderSectionPPL__p"> They wish that offer brave ppl will help easily buy clothes... </p>
-              </div>
-              <div class="sliderSectionPPL__p">
-                <p class=" sliderSectionPPL__p"> Help your followers & they will be thankful! </p>
-              </div>
+              <?php while ( have_rows('hello_list') ) : the_row(); ?>
+                <div class="sliderSectionPPL__p">
+                  <p class=" sliderSectionPPL__p"> <?php  the_sub_field('text'); ?> </p>
+                </div>
+              <?php endwhile; ?>
             </div>
             <div class="sliderSectionPPL__btn_next"></div>
           </div>
+          <?php	endif; ?>
           <p class="SectionToPpl__endText"> <?php the_field('hello_subtitle'); ?></p>
         </div>
       </section>
@@ -259,16 +257,22 @@
           <h2 class="sectionForm__h sectionFormTwo__h"><?php the_field('change-title'); ?></h2>
           <p class="sectionFormTwo__p"><?php the_field('change-text'); ?></p>
           <form action="#" method="POST" class="sectionForm__form-v ">
-            <label> &nbsp;&nbsp;&nbsp;First name <br />
-              <input type="text" name="name" class="sectionForm__form_input fName" placeholder="First name" maxlength="32" pattern="[A-Za-z ]{1,32}" required/>
-            </label>
-            <label> &nbsp;&nbsp;&nbsp;Last name <br />
-              <input type="text" name="last_name" class="sectionForm__form_input lName" placeholder="Last name" maxlength="32" pattern="[A-Za-z ]{1,32}" required/>
-            </label>
-            <label> &nbsp;&nbsp;&nbsp;Email <br />
-              <input type="email" name="mail" class="sectionForm__form_input sectionForm__form_inputLast second-mail" placeholder="Email" required
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
-            </label>
+            <p>
+              <label> &nbsp;&nbsp;&nbsp;First name <br />
+                <input type="text" name="name" class="sectionForm__form_input fName" placeholder="First name" maxlength="32" pattern="[A-Za-z ]{1,32}" required/>
+              </label>
+            </p>
+            <p>
+              <label> &nbsp;&nbsp;&nbsp;Last name <br />
+                <input type="text" name="last_name" class="sectionForm__form_input lName" placeholder="Last name" maxlength="32" pattern="[A-Za-z ]{1,32}" required/>
+              </label>
+            </p>
+            <p>
+              <label> &nbsp;&nbsp;&nbsp;Email <br />
+                <input type="email" name="mail" class="sectionForm__form_input sectionForm__form_inputLast second-mail" placeholder="Email" required
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+              </label>
+            </p>
             <button type="submit" class=" btnSignUp btnSignUp__join">Sign UP</button>
             <a href="https://plusppl.com/wp-login.php?loginSocial=facebook" rel="nofollow" aria-label="Login via <b>Facebook</b>" data-plugin="nsl" data-action="connect" data-provider="facebook" class="sectionForm__form_buttonInsta btnInsta "> Sign UP via Facebook </a>
 			<a href="<?= home_url('/wp-login.php?loginSocial=google/'); ?>" class="sectionForm__form_buttonInsta btnInsta btnGoogle__join"> Sign UP via Google </a>

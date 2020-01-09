@@ -246,7 +246,7 @@ function st_handle_registration(){
 		$shops = isset($_POST['shops']) ? $_POST['shops'] : [];
 		$mails = isset($_POST['mails']) ? $_POST['mails'] : [];
 		$inst = isset($_POST['inst']) ? $_POST['inst'] : [];
-		
+
 		$json = ['success' => false];
 
 		if( empty( $_POST['name'] ) )
@@ -281,7 +281,7 @@ function st_handle_registration(){
 
 				$user_meta = compact('fname', 'lname', 'shops', 'mails', 'inst');
 				update_user_meta($user_id, 'first_name', $fname);
-				update_user_meta($user_id, 'last_name', $lname);			 
+				update_user_meta($user_id, 'last_name', $lname);
 				foreach($user_meta as $key => $value) {
 					update_user_meta($user_id, $key, $value);
 				}
@@ -295,8 +295,8 @@ function st_handle_registration(){
 		    $json['message'] = $error;
 			$json['success'] = false;
 		}
-		
-		
+
+
 		die(json_encode($json));
 	}
 }
@@ -305,18 +305,18 @@ add_action( 'wp_ajax_nopriv_register_action', 'st_handle_registration' );
 
 
 
-$providerID = 'facebook';
-if (NextendSocialLogin::isProviderEnabled($providerID)) {
-  $provider = NextendSocialLogin::$enabledProviders[$providerID];
-  try {
-      $socialID = $provider->findSocialIDByAccessToken($accessToken);
-  } catch (Exception $e) {
-  
-  }
-}
-if (NextendSocialLogin::isProviderEnabled($providerID)) {
-  $provider = NextendSocialLogin::$enabledProviders[$providerID];
-  $provider->linkUserToProviderIdentifier($wordpress_user_id, $socialID);
-
-  
-}
+// $providerID = 'facebook';
+// if (NextendSocialLogin::isProviderEnabled($providerID)) {
+//   $provider = NextendSocialLogin::$enabledProviders[$providerID];
+//   try {
+//       $socialID = $provider->findSocialIDByAccessToken($accessToken);
+//   } catch (Exception $e) {
+//
+//   }
+// }
+// if (NextendSocialLogin::isProviderEnabled($providerID)) {
+//   $provider = NextendSocialLogin::$enabledProviders[$providerID];
+//   $provider->linkUserToProviderIdentifier($wordpress_user_id, $socialID);
+//
+//
+// }

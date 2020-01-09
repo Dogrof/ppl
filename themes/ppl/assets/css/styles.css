@@ -2329,9 +2329,9 @@ svg {
     .firstSection__scrollDown:before {
         display: none
     }
-	section.motivation{
+	/* section.motivation{
 		max-height: 683px;
-	}
+	} */
     .firstSection__scrollDownMobail {
         display: block;
         margin-bottom: 70px
@@ -2597,22 +2597,19 @@ svg {
 }
 
 @media screen and (max-width:594px) {
-    .btnSignUp {
-        width: 266px;
-        height: 60px;
+    .btnSignUp,
+		.btnInsta  {
+        width: 100%;
+        height: 47px;
         font-size: 14px;
         margin-bottom: 12px
     }
-    .btnInsta {
-		width: 208px;
-		height: 47px;
-		font-size: 14px;
-    }
+
     .joinInput {
         height: 47px
     }
     .sectionForm__form {
-        width: 266px
+        width: 100%;
     }
     .sectionForm__form_input {
         height: 47px
