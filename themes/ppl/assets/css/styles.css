@@ -2579,7 +2579,7 @@ svg {
     .joinInput,
     .sectionForm__form_input {
         margin-top: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 17px;
         font-size: 14px
     }
 	.btnGoogle__join{
@@ -2684,7 +2684,7 @@ svg {
         margin: 0 auto
     }
     .SectionToPpl__p {
-        width: 292px;
+        /* width: 292px; */
         font-size: 14px
     }
     .SectionToPpl__endText {
